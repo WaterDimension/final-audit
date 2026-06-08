@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "McpToolFinalAuditTemplate",
+  "description": "Draft MCP-style tool contract for a future final_audit tool. This repository version does not implement an MCP server yet.",
+  "type": "object",
+  "properties": {
+    "name": { "const": "final_audit" },
+    "description": {
+      "const": "Run a final project audit using the repository canonical workflow for release readiness, vulnerability analysis, API documentation, API testing, and interface nonconformance reporting."
+    },
+    "inputSchema": { "$ref": "final-audit.input.schema.json" },
+    "outputSchema": { "$ref": "final-audit.output.schema.json" }
+  },
+  "required": ["name", "description", "inputSchema"],
+  "additionalProperties": false
+}
